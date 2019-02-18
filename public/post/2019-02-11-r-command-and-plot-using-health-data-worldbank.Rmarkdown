@@ -1,0 +1,18 @@
+---
+title: R  command and plot using health data worldbank
+author: pv
+date: '2019-02-11'
+slug: r-command-and-plot-using-health-data-worldbank
+categories:
+  - R
+tags:
+  - plot
+  
+thumbnail = “images/1.jpg"  
+---
+```{r}
+h<-read.csv("/home/peter/test/health2.csv")
+str(h)
+library("latticeExtra", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.0")
+xyplot(life.expec ~ gdp.cap | factor(country), data = h, type = c("country", "r"))
+```

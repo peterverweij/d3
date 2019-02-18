@@ -1,0 +1,10 @@
+---
+title: plot2
+author: pv
+date: '2019-02-09'
+slug: plot2
+categories:
+  - R
+tags:
+  - plot
+---

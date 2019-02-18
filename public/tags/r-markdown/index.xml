@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Markdown on </title>
+    <link>/tags/r-markdown/</link>
+    <description>Recent content in R Markdown on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 11 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bbc 2</title>
+      <link>/post/bbc-2/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bbc-2/</guid>
+      <description>library(dplyr)  ## ## Attaching package: &#39;dplyr&#39;  ## The following objects are masked from &#39;package:stats&#39;: ## ## filter, lag  ## The following objects are masked from &#39;package:base&#39;: ## ## intersect, setdiff, setequal, union  library(tidyr) library(gapminder) library(ggplot2) library(ggalt) library(forcats) library(R.utils)  ## Loading required package: R.oo  ## Loading required package: R.methodsS3  ## R.methodsS3 v1.7.1 (2016-02-15) successfully loaded. See ?R.methodsS3 for help.  ## R.oo v1.22.0 (2018-04-21) successfully loaded.</description>
+    </item>
+    
+    <item>
+      <title>code r 6</title>
+      <link>/post/code-r-6/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/code-r-6/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/hello-r-markdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/post/hello-r-markdown/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+  </channel>
+</rss>

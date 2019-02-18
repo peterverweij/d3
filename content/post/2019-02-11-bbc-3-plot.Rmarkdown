@@ -1,0 +1,49 @@
+---
+title: bbc 3 plot
+author: pv
+date: '2019-02-11'
+slug: bbc-3-plot
+categories:
+  - R
+tags:
+  - plot
+---
+```{r}
+library('dplyr')
+library('tidyr')
+library('gapminder')
+library('ggplot2')  
+library('ggalt')
+library('forcats') 
+library('R.utils') 
+library('png') 
+library('grid') 
+library('ggpubr') 
+library('scales')
+library('bbplot')
+
+grouped_bar_df <- gapminder %>%
+  filter(year == 1967 | year == 2007) %>%
+  select(country, year, lifeExp) %>%
+  spread(year, lifeExp) %>%
+  mutate(gap = `2007` - `1967`) %>%
+  arrange(desc(gap)) %>%
+  head(5) %>%
+  gather(key = year, 
+         value = lifeExp,
+         -country,
+         -gap) 
+  
+#Make plot
+grouped_bars <- ggplot(grouped_bar_df, 
+                       aes(x = country, 
+                           y = lifeExp, 
+                           fill = as.factor(year))) +
+  geom_bar(stat="identity", position="dodge") +
+  geom_hline(yintercept = 0, size = 1, colour="#333333") +
+  bbc_style() +
+  scale_fill_manual(values = c("#1380A1", "#FAAB18")) +
+  labs(title="We're living longer",
+       subtitle = "Biggest life expectancy rise, 1967-2007")
+grouped_bars
+```

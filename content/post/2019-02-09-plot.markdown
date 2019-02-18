@@ -1,0 +1,20 @@
+---
+title: plot
+author: pv
+date: '2019-02-09'
+slug: plot
+categories:
+  - R
+tags:
+  - plot
+---
+*example of executing R and making a plot
+
+
+```r
+library(ggplot2)
+ggplot(diamonds, aes(x=carat, y=price, color=clarity)) + geom_point()
+```
+
+<img src="/post/2019-02-09-plot_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+

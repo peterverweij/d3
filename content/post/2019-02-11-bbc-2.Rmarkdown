@@ -1,0 +1,35 @@
+---
+title: bbc 2
+author: pv
+date: '2019-02-11'
+slug: bbc-2
+categories:
+  - R
+tags:
+  - R Markdown
+---
+```{r}
+library(dplyr)
+library(tidyr)
+library(gapminder)
+library(ggplot2)  
+library(ggalt)
+library(forcats) 
+library(R.utils) 
+library(png) 
+library(grid) 
+library(ggpubr) 
+library(scales)
+library(bbplot)
+line_df <- gapminder %>%
+  filter(country == "Malawi") 
+
+#Make plot
+line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
+  geom_line(colour = "#1380A1", size = 1) +
+  geom_hline(yintercept = 0, size = 1, colour="#333333") +
+  bbc_style() +
+  labs(title="Living longer",
+       subtitle = "Life expectancy in Malawi 1952-2007")
+line
+```

@@ -1,0 +1,65 @@
+baseurl         = "/"
+theme = "hugo-casper-two"
+languageCode    = "en-US"
+disqusShortname = ""
+paginate        = 6
+#SectionPagesMenu = "main"
+canonifyurls    = true
+#publishDir = "peterverweij.github.io"
+
+[params]
+  title       = "D3MEDIA"
+  subtitle    = "R in Data Journalism"
+  copyright   = "© 2018"
+
+  cover       = "img/blog-cover2.jpg"
+  description = "blog about examples,assignments and training"
+  metaDescription = ""
+  googleAnalytics = "UA-48018100-1"
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "peter_verweij"
+  fbName = "peter verweij"
+  githubName = "peterverweij"
+  linkedinName = "peter-verweij"
+  mediumName = "verweijpjc"
+
+  logo = "img/hugo-logo2.png"
+  orgName = "D3-Media"
+  orgWebsite = "https://www.d3-media.nl"
+  orgDescription = "Here is a description placeholder for your org"
+
+  showSupport = true
+
+  authorAvatar = "img/hugo-logo2.png"
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/post/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
+#[[menu.main]]
+  #name = "Go"
+  #url = "/tags/golang/"
+  #weight = 100
+
+#[[menu.main]]
+  #name = "Categories"
+  #url = "/categories/"
+  #weight = 99
+
+[[menu.main]]
+  name = "External"
+  url = "https://sites.google.com/a/d3-media.nl/d3/"
+  weight = 95
+
+
