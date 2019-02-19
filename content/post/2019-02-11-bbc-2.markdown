@@ -73,7 +73,7 @@ library(R.utils)
 ```
 
 ```
-## R.utils v2.7.0 successfully loaded. See ?R.utils for help.
+## R.utils v2.8.0 successfully loaded. See ?R.utils for help.
 ```
 
 ```

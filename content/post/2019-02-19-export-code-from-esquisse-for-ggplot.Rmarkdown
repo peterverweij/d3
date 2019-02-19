@@ -1,0 +1,40 @@
+---
+title: Export code from esquisse for ggplot
+author: pv
+date: '2019-02-19'
+slug: export-code-from-esquisse-for-ggplot
+categories: []
+tags: []
+---
+Esquisse is a new package that provides a GUI for ggplot. More on esquisse, see [my blog](http://d3-media.blogspot.com/2019/02/gui-for-r-ggplot.html)
+The good thing about esquisse is the fine tuning, for example exporting the code.
+
+Here follows an example.
+## Life expectancy for sub sahara countries
+
+Let's have a look at the data first
+
+```{r}
+setwd("/home/peter/test")
+health<-read.csv("health2.csv")
+head(health)
+str(health)
+```
+We are making a simple boxplot for life expectancies.
+Here is a picture.
+
+![](/post/2019-02-19-export-code-from-esquisse-for-ggplot_files/r1.png)
+
+Then we run the exported code for ggplot
+
+```{r}
+library("ggplot2", lib.loc="~/R/x86_64-pc-linux-gnu-library/3.5")
+ggplot(data = health) +
+  aes(x = country, y = life.expec, color = country) +
+  geom_boxplot(fill = '#0c4c8a') +
+  scale_colour_viridis_d(option  = "plasma") +
+  labs(title = 'Life Expectancy SH Countries',
+    x = 'country',
+    y = 'life',
+    subtitle = '2000-2014') 
+```

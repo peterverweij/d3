@@ -4,36 +4,36 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>R  command and plot using health data worldbank &middot; </title>
+    <title>Export code from esquisse for ggplot &middot; </title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/post/r-command-and-plot-using-health-data-worldbank/" />
+    <link rel="canonical" href="/post/export-code-from-esquisse-for-ggplot/" />
 
-     <meta name="description" content="h&amp;lt;-read.csv(&amp;quot;/home/peter/test/health2.csv&amp;quot;) str(h)  ## &#39;data.frame&#39;:	165 obs. of 8 variables: ## $ year : int 2000 2001 2002 2003 2004 2005 2006 20" /> 
+     <meta name="description" content="Esquisse is a new package that provides a GUI for ggplot. More on esquisse, see my blog The good thing about esquisse is the fine tuning, for example exporting " /> 
 
      
     
     <meta name="twitter:card" content="summary"/>
     
  
-    <meta name="twitter:title" content="R  command and plot using health data worldbank"/>
-    <meta name="twitter:description" content="h&amp;lt;-read.csv(&amp;quot;/home/peter/test/health2.csv&amp;quot;) str(h)  ## &#39;data.frame&#39;:	165 obs. of 8 variables: ## $ year : int 2000 2001 2002 2003 2004 2005 2006 20"/>
-    <meta name="twitter:url" content="/post/r-command-and-plot-using-health-data-worldbank/" />
+    <meta name="twitter:title" content="Export code from esquisse for ggplot"/>
+    <meta name="twitter:description" content="Esquisse is a new package that provides a GUI for ggplot. More on esquisse, see my blog The good thing about esquisse is the fine tuning, for example exporting "/>
+    <meta name="twitter:url" content="/post/export-code-from-esquisse-for-ggplot/" />
     <meta name="twitter:site" content="@peter_verweij"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="R  command and plot using health data worldbank &middot; D3MEDIA" />
-    <meta property="og:url" content="/post/r-command-and-plot-using-health-data-worldbank/" />
+    <meta property="og:title" content="Export code from esquisse for ggplot &middot; D3MEDIA" />
+    <meta property="og:url" content="/post/export-code-from-esquisse-for-ggplot/" />
     <meta property="article:publisher" content="https://www.facebook.com/peter verweij" />
 
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="h&amp;lt;-read.csv(&amp;quot;/home/peter/test/health2.csv&amp;quot;) str(h)  ## &#39;data.frame&#39;:	165 obs. of 8 variables: ## $ year : int 2000 2001 2002 2003 2004 2005 2006 20" />
+    <meta property="og:description" content="Esquisse is a new package that provides a GUI for ggplot. More on esquisse, see my blog The good thing about esquisse is the fine tuning, for example exporting " />
 
-    <meta property="article:published_time" content="2019-02-11T00:00:00Z" />
-    <meta property="article:tag" content="plot" />
+    <meta property="article:published_time" content="2019-02-19T00:00:00Z" />
+    
 
     <meta property="og:image" content="/img/blog-cover2.jpg"/>
 
@@ -103,19 +103,49 @@
       <article class="post-full post"> 
     <header class="post-full-header">
         <section class="post-full-meta">
-            <time class="post-full-meta-date" datetime="2019-02-11">11 February 2019</time>
-                <span class="date-divider">/</span> <a href="/tags/plot/">#plot</a>&nbsp;
+            <time class="post-full-meta-date" datetime="2019-02-19">19 February 2019</time>
         </section>
-        <h1 class="post-full-title">R  command and plot using health data worldbank</h1>
+        <h1 class="post-full-title">Export code from esquisse for ggplot</h1>
     </header>
     
-    <figure class="post-full-image" style="background-image: url(/defimg/2.jpg)">
+    <figure class="post-full-image" style="background-image: url(/defimg/5.jpg)">
     </figure>
 
     <section class="post-full-content">
         <div class="kg-card-markdown">
-        <pre><code class="language-r">h&lt;-read.csv(&quot;/home/peter/test/health2.csv&quot;)
-str(h)
+        
+
+<p>Esquisse is a new package that provides a GUI for ggplot. More on esquisse, see <a href="http://d3-media.blogspot.com/2019/02/gui-for-r-ggplot.html">my blog</a>
+The good thing about esquisse is the fine tuning, for example exporting the code.</p>
+
+<p>Here follows an example.</p>
+
+<h2 id="life-expectancy-for-sub-sahara-countries">Life expectancy for sub sahara countries</h2>
+
+<p>Let&rsquo;s have a look at the data first</p>
+
+<pre><code class="language-r">setwd(&quot;/home/peter/test&quot;)
+health&lt;-read.csv(&quot;health2.csv&quot;)
+head(health)
+</code></pre>
+
+<pre><code>##   year country life.expec   gdp.cap code Total.as.percGDP
+## 1 2000  Angola     46.621  606.2723  AGO             2.79
+## 2 2001  Angola     47.374  574.1942  AGO             5.38
+## 3 2002  Angola     48.109  775.7655  AGO             3.63
+## 4 2003  Angola     48.793  850.0757  AGO             4.41
+## 5 2004  Angola     49.410 1135.6046  AGO             4.71
+## 6 2005  Angola     49.954 1576.1628  AGO             4.10
+##   govperc.total.exp privat.perc.of.total
+## 1             60.17                39.83
+## 2             52.23                47.77
+## 3             46.37                53.63
+## 4             46.41                53.59
+## 5             51.15                48.85
+## 6             49.33                50.67
+</code></pre>
+
+<pre><code class="language-r">str(health)
 </code></pre>
 
 <pre><code>## 'data.frame':	165 obs. of  8 variables:
@@ -129,19 +159,25 @@ str(h)
 ##  $ privat.perc.of.total: num  39.8 47.8 53.6 53.6 48.9 ...
 </code></pre>
 
-<pre><code class="language-r">library(&quot;latticeExtra&quot;, lib.loc=&quot;~/R/x86_64-pc-linux-gnu-library/3.0&quot;)
+<p>We are making a simple boxplot for life expectancies.
+Here is a picture.</p>
+
+<p><img src="/post/2019-02-19-export-code-from-esquisse-for-ggplot_files/r1.png" alt="" /></p>
+
+<p>Then we run the exported code for ggplot</p>
+
+<pre><code class="language-r">library(&quot;ggplot2&quot;, lib.loc=&quot;~/R/x86_64-pc-linux-gnu-library/3.5&quot;)
+ggplot(data = health) +
+  aes(x = country, y = life.expec, color = country) +
+  geom_boxplot(fill = '#0c4c8a') +
+  scale_colour_viridis_d(option  = &quot;plasma&quot;) +
+  labs(title = 'Life Expectancy SH Countries',
+    x = 'country',
+    y = 'life',
+    subtitle = '2000-2014') 
 </code></pre>
 
-<pre><code>## Loading required package: lattice
-</code></pre>
-
-<pre><code>## Loading required package: RColorBrewer
-</code></pre>
-
-<pre><code class="language-r">xyplot(life.expec ~ gdp.cap | factor(country), data = h, type = c(&quot;country&quot;, &quot;r&quot;))
-</code></pre>
-
-<p><img src="/post/2019-02-11-r-command-and-plot-using-health-data-worldbank_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/2019-02-19-export-code-from-esquisse-for-ggplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
     
         </div>
     </section>
@@ -173,7 +209,6 @@ str(h)
     <header class="read-next-card-header">
         <small class="read-next-card-header-sitetitle">&mdash; D3MEDIA &mdash;</small>
         
-        <h3 class="read-next-card-header-title"><a href="/tags/plot/">#plot</a></h3>
     </header>
     <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
     </div>
@@ -181,18 +216,19 @@ str(h)
     <div class="read-next-card-content">
       
         <ul>
-          <li><a href="/post/export-code-from-esquisse-for-ggplot/">Export code from esquisse for ggplot</a></li>            
+          <li><a href="/post/creating-a-new-theme/">Creating a New Theme</a></li>            
         
-          <li><a href="/post/colenak/">Colenak</a></li>            
+          <li><a href="/post/bbc-3-plot/">bbc 3 plot</a></li>            
+        
+                      
         
           <li><a href="/post/code-r-6/">code r 6</a></li>            
         
-          <li><a href="/post/getting-started-with-hugo/">Getting Started with Hugo</a></li>            
+          <li><a href="/post/r-command-and-plot-using-health-data-worldbank/">R  command and plot using health data worldbank</a></li>            
         </ul>
     </div>
     <footer class="read-next-card-footer">
       
-        <a href="/tags/plot/">See all related posts →</a>
     </footer>
 </article>
 
@@ -200,8 +236,37 @@ str(h)
       
       <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/post/pic/">
+    <a class="post-card-image-link" href="/post/wonderful/">
       <div class="post-card-image" style="background-image: url(/defimg/3.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="/post/wonderful/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">Wonderful</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
+We&rsquo;ll start with creating a new site with a very basic template. ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="/hugo-logo.png" alt="Author" />
+          <span class="post-card-author"><a href="/">Michael Henderson</a></span>
+      </footer>
+    </div>
+</article>
+      
+      
+      <article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="/post/pic/">
+      <div class="post-card-image" style="background-image: url(/defimg/5.jpg)"></div>
     </a>    
     
 
@@ -227,36 +292,6 @@ str(h)
     </div>
 </article>
       
-      
-      <article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="/post/bbc-2/">
-      <div class="post-card-image" style="background-image: url(/defimg/1.jpg)"></div>
-    </a>    
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="/post/bbc-2/">
-          <header class="post-card-header">
-              <span class="post-card-tags">
-              #R Markdown  </span>
-              
-              <h2 class="post-card-title">bbc 2</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p>library(dplyr)  ## ## Attaching package: 'dplyr'  ## The following objects are masked from 'package:stats': ## ## filter, lag  ## The following objects are masked from 'package:base': ## ## intersect, setdiff, setequal, union  library(tidyr) library(gapminder) library(ggplot2) library(ggalt) library(forcats) library(R.utils)  ## Loading required package: R.oo  ## Loading required package: R.methodsS3  ## R.methodsS3 v1.7.1 (2016-02-15) successfully loaded. See ?R.methodsS3 for help.  ## R.oo v1.22.0 (2018-04-21) successfully loaded. ...  </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="/img/hugo-logo2.png" alt="Author" />
-          <span class="post-card-author"><a href="/">pv</a></span>
-      </footer>
-    </div>
-</article>
-      
     </div>
   </div>
 </aside>
@@ -269,17 +304,17 @@ str(h)
     </a>
   </div>
   <span class="floating-header-divider">&mdash;</span>
-  <div class="floating-header-title">R  command and plot using health data worldbank</div>
+  <div class="floating-header-title">Export code from esquisse for ggplot</div>
   <div class="floating-header-share">
     <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
      <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/></svg>
     </div>
     
-    <a class="floating-header-share-tw" href="https://twitter.com/share?text=R%20%20command%20and%20plot%20using%20health%20data%20worldbank&amp;url=%2fpost%2fr-command-and-plot-using-health-data-worldbank%2f"
+    <a class="floating-header-share-tw" href="https://twitter.com/share?text=Export%20code%20from%20esquisse%20for%20ggplot&amp;url=%2fpost%2fexport-code-from-esquisse-for-ggplot%2f"
           onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
       </a>
-      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fr-command-and-plot-using-health-data-worldbank%2f"
+      <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fexport-code-from-esquisse-for-ggplot%2f"
           onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
       </a>

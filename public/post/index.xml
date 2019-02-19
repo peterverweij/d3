@@ -42,6 +42,18 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>Export code from esquisse for ggplot</title>
+      <link>/post/export-code-from-esquisse-for-ggplot/</link>
+      <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/export-code-from-esquisse-for-ggplot/</guid>
+      <description>Esquisse is a new package that provides a GUI for ggplot. More on esquisse, see my blog The good thing about esquisse is the fine tuning, for example exporting the code.
+Here follows an example.
+Life expectancy for sub sahara countries Let&amp;rsquo;s have a look at the data first
+setwd(&amp;quot;/home/peter/test&amp;quot;) health&amp;lt;-read.csv(&amp;quot;health2.csv&amp;quot;) head(health)  ## year country life.expec gdp.cap code Total.as.percGDP ## 1 2000 Angola 46.621 606.2723 AGO 2.79 ## 2 2001 Angola 47.</description>
+    </item>
+    
+    <item>
       <title>pic</title>
       <link>/post/pic/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
